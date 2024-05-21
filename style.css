@@ -1,0 +1,181 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    animation: pulse 1s infinite;
+    background-color: #00ff00; /* Green background initially */
+}
+
+@keyframes pulse {
+    0% { background-color: #00ff00; }
+    50% { background-color: #000000; }
+    100% { background-color: #00ff00; }
+}
+
+body.landing {
+    background-color: #000000;
+    animation: landingPulse 1s infinite;
+}
+
+@keyframes landingPulse {
+    0% { background-color: #000000; }
+    50% { background-color: #00ff00; }
+    100% { background-color: #000000; }
+}
+
+h1 {
+    font-size: 50px;
+    color: #ffa500; /* Orange */
+    animation: colorChange 1s infinite;
+}
+
+@keyframes colorChange {
+    0% { color: #ffa500; }
+    50% { color: #0000ff; }
+    100% { color: #ffa500; }
+}
+
+button {
+    padding: 20px;
+    font-size: 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button.trigger {
+    background-color: red;
+}
+
+button:hover {
+    background-color: darkblue;
+}
+
+#roulette {
+    width: 200px;
+    height: 200px;
+    border: 5px solid black;
+    margin: 20px auto;
+    position: relative;
+    border-radius: 50%;
+}
+
+#symbols {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.symbol {
+    position: absolute;
+    font-size: 30px;
+}
+
+#center {
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.controls button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.hidden {
+    display: none;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+#result {
+    font-weight: bold;
+    color: neon pink;
+}
+
+#hiddenEmoji {
+    cursor: pointer;
+    font-size: 30px;
+    transition: transform 0.3s ease;
+}
+
+#hiddenEmoji:hover {
+    transform: scale(1.2);
+}
+
+.eyesContainer span {
+    position: absolute;
+    animation: float 3s infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+#secretPasswordContainer {
+    margin-top: 20px;
+}
+
+#secretPassword {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #000;
+    border-radius: 5px;
+}
+
+.flashing-orange-blue {
+    animation: flash-orange-blue 1s infinite;
+}
+
+@keyframes flash-orange-blue {
+    0% { color: orange; }
+    50% { color: blue; }
+    100% { color: orange; }
+}
+
+.verticalText {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    animation: flash-red-yellow 1s infinite;
+}
+
+@keyframes flash-red-yellow {
+    0% { color: red; }
+    50% { color: yellow; }
+    100% { color: red; }
+}
+
+body.winner {
+    background-color: #000000;
+}
+
+h1.wiggle {
+    font-size: 50px;
+    animation: wiggle 3s infinite;
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(3deg); }
+    75% { transform: rotate(-3deg); }
+}
+
+h1.orange { color: orange; }
+h1.blue { color: blue; }html {
+  height: 100%;
+  width: 100%;
+}

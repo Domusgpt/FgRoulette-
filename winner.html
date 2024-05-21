@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winner</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(3deg); }
+            75% { transform: rotate(-3deg); }
+        }
+        h1 {
+            font-size: 50px;
+            animation: wiggle 3s infinite;
+        }
+        .orange { color: orange; }
+        .blue { color: blue; }
+        .hidden { display: none; }
+        #largeGlasses {
+            font-size: 100px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="wiggle">You and Everyone You Know Will Eventually Not Exist</h1>
+    <div id="secretPasswordContainer" class="hidden">
+        <input type="password" id="secretPassword" placeholder="Secret Password">
+    </div>
+    <div id="largeGlasses">🕶️</div>
+    <script>
+        function alternateColors() {
+            const letters = document.querySelectorAll('h1.wiggle span');
+            letters.forEach((letter, index) => {
+                if (index % 2 === 0) {
+                    letter.classList.add('orange');
+                } else {
+                    letter.classList.add('blue');
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const text = document.querySelector('h1.wiggle').textContent;
+            const container = document.querySelector('h1.wiggle');
+            container.innerHTML = '';
+            text.split('').forEach(char => {
+                const span = document.createElement('span');
+                span.textContent = char;
+                container.appendChild(span);
+            });
+            alternateColors();
+
+            document.getElementById('largeGlasses').addEventListener('click', () => {
+                document.getElementById('secretPasswordContainer').classList.remove('hidden');
+                document.getElementById('largeGlasses').textContent = 'Enter';
+                document.getElementById('largeGlasses').addEventListener('click', () => {
+                    const password = document.getElementById('secretPassword').value;
+                    if (password === 'theylive') {
+                        window.location.href = 'secret.html';
+                    } else {
+                        alert('Incorrect Password');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

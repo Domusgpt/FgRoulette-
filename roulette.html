@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roulette Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="roulette">
+    <div class="container">
+        <h1>Roulette Game</h1>
+        <div id="roulette">
+            <div id="symbols">
+                <span class="symbol" style="transform: rotate(0deg) translate(70px) rotate(-0deg);">🪬</span>
+                <span class="symbol" style="transform: rotate(60deg) translate(70px) rotate(-60deg);">🪬</span>
+                <span class="symbol" style="transform: rotate(120deg) translate(70px) rotate(-120deg);">🪬</span>
+                <span class="symbol" style="transform: rotate(180deg) translate(70px) rotate(-180deg);">🪬</span>
+                <span class="symbol" style="transform: rotate(240deg) translate(70px) rotate(-240deg);">🪬</span>
+                <span class="symbol" style="transform: rotate(300deg) translate(70px) rotate(-300deg);">🪬</span>
+            </div>
+            <div id="center">🧿</div>
+        </div>
+        <div class="controls">
+            <button id="spinButton" class="spin">Spin</button>
+        </div>
+        <div id="result"></div>
+        <div id="hiddenFeatures">
+            <span id="hiddenEmoji">🕶️</span>
+            <div id="paypalButtonContainer" class="hidden">
+                <div id="paypalButton"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.paypal.com/sdk/js?client-id=sb"></script>
+    <script src="script.js"></script>
+</body>
+</html>

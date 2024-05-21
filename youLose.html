@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You Lose</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @keyframes flash {
+            0% { background-color: black; }
+            50% { background-color: red; }
+            100% { background-color: black; }
+        }
+        body {
+            animation: flash 1s infinite;
+            background: black;
+            color: white;
+        }
+        h1 {
+            font-size: 50px;
+            color: red;
+        }
+        #skull {
+            font-size: 300px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.1;
+        }
+        #resetButton {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="skull">☠️</div>
+    <h1>You Lose</h1>
+    <button id="resetButton">Try Again</button>
+    <script>
+        document.getElementById('resetButton').addEventListener('click', () => {
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
